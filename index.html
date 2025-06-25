@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('imagens/fundo.JPG');
+      background-image: url('fundo.JPG');
       background-repeat: repeat;
       background-size: auto;
       background-attachment: fixed;
@@ -209,7 +209,7 @@
 <body>
 
 <header>
-  <img src="imagens/logo.png" alt="Logo Vai de Doce">
+  <img src="logo.png" alt="Logo Vai de Doce">
 </header>
 
 <section class="botoes">
@@ -222,9 +222,9 @@
   <p>Uma explosão de sabor em cada mordida! Cocadas artesanais feitas com carinho.</p>
 
   <section class="galeria">
-    <img src="imagens/foto1.jpg" alt="Produto 1">
-    <img src="imagens/foto2.jpg" alt="Produto 2">
-    <img src="imagens/foto3.jpg" alt="Produto 3">
+    <img src="foto1.jpg" alt="Produto 1">
+    <img src="foto2.jpg" alt="Produto 2">
+    <img src="foto3.jpg" alt="Produto 3">
   </section>
 </main>
 
@@ -270,9 +270,6 @@
     <button onclick="enviarPedido()">Enviar Pedido no WhatsApp</button>
   </div>
 </div>
-
-<!-- Efeito sonoro -->
-<audio id="clickSound" src="imagens/click.mp3" preload="auto"></audio>
 
 <script>
 const sabores = [
@@ -459,18 +456,7 @@ function enviarPedido() {
     botao.disabled = false;
     botao.innerHTML = "Enviar Pedido no WhatsApp";
   }, 1200);
-}
-
-// Efeito sonoro nos botões
-const clickSound = document.getElementById("clickSound");
-document.querySelectorAll('button, .botoes a').forEach(el => {
-  el.addEventListener('click', () => {
-    if (clickSound) {
-      clickSound.currentTime = 0;
-      clickSound.play();
-    }
-  });
-});
+};
 </script>
 
 </body>
